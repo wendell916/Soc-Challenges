@@ -1,4 +1,4 @@
-# Day 1
+# Task 1
 # Challenge1: Collecting logs from windows powershell 
 By default, Windows does not log commands executed in PowerShell and Command Prompt (CMD) to the Event Viewer. In this challenge, we will configure logging to capture and review executed commands, enhancing visibility for auditing and security monitoring.
 # Enable logging for windows powershell
