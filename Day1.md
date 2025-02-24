@@ -25,9 +25,7 @@ This command is used for transferring data across different protocols like https
 ![image](https://github.com/user-attachments/assets/184c4ffa-87d7-40b2-8d26-82eef047ccc0)
 
 
-# Task 2
-# Identify and analyse windows login events and understand how to differentiate successful and failed login using windows event viewer and windows powershell.
-
+# Task 2  Identify and analyse windows login events and understand how to differentiate successful and failed login using windows event viewer and windows powershell.
 # Stimulate Login events
 * Win + L ( Firstly successful log in your machine correctly and then try log in with incorrect passwords)
 * Filter the event viewer logs with the following events IDs and you view the events.
@@ -44,5 +42,6 @@ Get-WinEvent -LogName Security | Where-Object { $_.Id -eq 4625 } | Select-Object
 ![image](https://github.com/user-attachments/assets/150eadc3-3cfc-4a14-92d7-eecb83d09a9f)
 
 
-# Task 3
+# Task 3 Extract and Analyze Sysmon Logs for Process Creation
+
   
