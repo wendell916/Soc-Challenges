@@ -44,6 +44,5 @@ Get-WinEvent -LogName Security | Where-Object { $_.Id -eq 4625 } | Select-Object
 ![image](https://github.com/user-attachments/assets/150eadc3-3cfc-4a14-92d7-eecb83d09a9f)
 
 
-
-  
+# Task 3
   
