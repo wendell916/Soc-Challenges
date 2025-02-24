@@ -22,15 +22,27 @@ This command is used for transferring data across different protocols like https
 * Navigate to > Applications and Services Logs > Microsoft > Windows > PowerShell > Operational
 * Click Filter Current Log and enter Event ID 4104 (Execute a Remote Command).
 * Locate the entry showing the execution of the Get-LocalUser command.
-![image](https://github.com/user-attachments/assets/273ae2c3-03a3-4175-9de8-5955133a1175)
+![image](https://github.com/user-attachments/assets/184c4ffa-87d7-40b2-8d26-82eef047ccc0)
+
 
 # Task 2
 # Identify and analyse windows login events and understand how to differentiate successful and failed login using windows event viewer and windows powershell.
 
 # Stimulate Login events
 * Win + L ( Firstly successful log in your machine correctly and then try log in with incorrect passwords)
-* Filter the event viewer logs with the following events IDs
+* Filter the event viewer logs with the following events IDs and you view the events.
 * 4624 = Logon successful
 * 4625 > Logon failure
+* Powershell can also be used to view both login and failed events
+  For the purposes of detection, I am going to use it for windows powershell for the possible detection of  bruteforce attacks.
+  NB:Powershell must be run with admin priviledges
+* If you see multiple failed attempts for the same account within a short time, it might indicate brute-force activity.
+``
+Get-WinEvent -LogName Security | Where-Object { $_.Id -eq 4625 } | Select-Object TimeCreated, Message
+
+``  
+![Uploading image.png…]()
+
+
   
   
